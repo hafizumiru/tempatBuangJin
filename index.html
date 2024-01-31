@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header id="header" class="header">
+    <nav id="nav-bar" class="nav-bar">
+      <div class="logo">
+        <a href="#" class="logo-img">
+          <img id="header-img" class="header-img" src="https://i.imgur.com/QPC1cLr.png" alt="MEC Logo">Tempat Buang Jin
+        </a>
+      </div>
+      <ul class="menu">
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#works-example">Works Example</a></li>
+        <li><a class="nav-link" href="#join-us">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="section">
+    <section id="home">
+      <h1>Perkenalan</h1>
+      <p>Komunitas kami memiliki tujuan yang unik: untuk mencerna dan memahami tingkah laku Mirul dalam melakukan
+        hal-hal
+        yang random dan aneh, namun tetap dalam batas yang tidak melanggar hukum. Kami percaya bahwa setiap individu
+        memiliki keunikan dalam ekspresi diri mereka, dan dalam kasus Mirul, hal ini tercermin dalam tindakan-tindakan
+        yang seringkali di luar kebiasaan. Melalui pemahaman dan penerimaan, kami berusaha untuk menyelami alasan di
+        balik
+        keanehan yang mungkin tidak dapat dimengerti secara langsung. Dengan pendekatan yang terbuka dan empati, kami
+        berharap dapat membuka jalan menuju pemahaman yang lebih dalam tentang entitas yang disebut Mirul ini.</p>
+    </section>
+    <section id="works-example">
+      <iframe id="video" class="video" width="1236" height="695" src="https://www.youtube.com/embed/Bzfv7a2_RFQ"
+        title="Apple Tea/杏沙子 Cover ft. Hatsune Miku" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </section>
+    <section id="join-us">
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input name="email" id="email" type="email" placeholder="Enter your email address" required="">
+        <input id="submit" type="submit" value="Get Started" class="btn">
+      </form>
+    </section>
+  </div>
+  <footer>
+    <p>Copyright © 2024 Our Community. All rights reserved.</p>
+  </footer>
+  <script>
+    window.onload = function () {
+      resizeIframe();
+    };
+
+    window.onresize = function () {
+      resizeIframe();
+    };
+
+    function resizeIframe() {
+      var iframes = document.getElementsByClassName('video');
+      for (var i = 0; i < iframes.length; i++) {
+        var width = iframes[i].clientWidth;
+        iframes[i].style.height = (width * 0.5625) + 'px'; // Assuming 16:9 aspect ratio (9 / 16 = 0.5625)
+      }
+    }
+  </script>
+</body>
+
+</html>
